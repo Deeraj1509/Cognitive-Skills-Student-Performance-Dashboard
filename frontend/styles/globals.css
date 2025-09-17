@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer components {
+  .card {
+    @apply bg-white rounded-lg shadow-md p-6 border border-gray-200;
+  }
+  
+  .stat-card {
+    @apply bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg p-4 border border-blue-200;
+  }
+  
+  .chart-container {
+    @apply w-full h-64 md:h-80 bg-white rounded-lg p-4 shadow-sm border;
+  }
+  .progress-bar {
+  max-width: 100%;
+}
+
+}
